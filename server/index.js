@@ -73,7 +73,7 @@ app.post('/api/users/login', (req, res) => {
     })
 });
 
-app.post('/api/users/auth', auth ,(req,res)=>{
+app.get('/api/users/auth', auth ,(req,res)=>{
     //여기 까지 미들웨어 통과 >> Authentication 이 True
     res.status(200).json({
         _id : req.user._id,
